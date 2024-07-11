@@ -8,7 +8,7 @@ body {
     background-color: #f0f8ff;
 }
 
-h1 {
+h2 {
     margin-bottom: 20px;
 }
 
@@ -35,24 +35,75 @@ button:hover {
     background-color: #45a049;
 }
 
-#weather {
+#weather, #hourlyContent, #dailyContent {
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 600px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-#hourly {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 300px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather-text {
+    flex: 1;
+}
+
+.weather-image {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.weather-image img {
+    max-width: 200px; /* Adjust image size */
+    max-height: 200px;
+}
+
+.hourly-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hourly-text {
+    flex: 1;
+}
+
+.hourly-image {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.hourly-image img {
+    max-width: 100px; /* Adjust image size */
+    max-height: 100px;
+}
+
+.daily-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.daily-content {
+    flex: 1;
+}
+
+.daily-image {
+    margin-left: 20px;
+}
+
+.daily-temp {
+    margin-left: 20px;
 }
 
 h2 {
@@ -62,4 +113,25 @@ h2 {
 
 p {
     margin: 5px 0;
+}
+
+img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#prevBtn, #nextBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #005f73;
 }
